@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Wife 💖</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  width: 360px;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+h1 {
+  color: #ff4d6d;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.button {
+  margin-top: 15px;
+  background: #ff4d6d;
+  color: white;
+  padding: 12px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.time {
+  margin-top: 12px;
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+.hearts span {
+  position: fixed;
+  color: pink;
+  animation: float 6s infinite;
+}
+
+@keyframes float {
+  0% {bottom: 0; opacity: 1;}
+  100% {bottom: 100vh; opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>🎂 Happy Birthday 🎂</h1>
+
+  <img src="inlove.jpg">
+
+  <div class="button">
+    Bấm vào đây nè Bé yêu 💞
+  </div>
+
+  <div class="time" id="together"></div>
+</div>
+
+<audio autoplay loop>
+  <source src="ido.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const startDate = new Date("2023-02-09");
+const now = new Date();
+const days = Math.floor((now - startDate) / (1000*60*60*24));
+document.getElementById("together").innerText =
+  "💑 We have been together for " + days + " days 💑";
+
+for(let i=0;i<20;i++){
+  let heart=document.createElement("span");
+  heart.innerHTML="💖";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=Math.random()*20+15+"px";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
